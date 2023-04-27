@@ -27,6 +27,7 @@ namespace CleanArcitexture.Application.Features.Players.Queries.GetAllPlayers
                 _mapper = mapper;
             }
             public async Task<Result<List<GetAllPlayersDto>>> Handle(GetAllPlayersQuery query, CancellationToken cancellationToken)
+            
             {
                 var players = await _unitOfWork.Repository<Player>().Entities
                        .ProjectTo<GetAllPlayersDto>(_mapper.ConfigurationProvider)
