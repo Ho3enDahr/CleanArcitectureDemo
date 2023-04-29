@@ -31,7 +31,16 @@ namespace CleanArcitexture.Application.Features.Players.Commands.CreatePlayer
                 Name = command.Name,
                 ShirtNo = command.ShirtNo,
                 PhotoUrl = command.PhotoUrl,
-                BirthDate = command.BirthDate
+                BirthDate = command.BirthDate,
+                ClubId = 3,
+                CountryId = 2,
+                CreateDate = DateTime.Now,
+                DisplayOrder = 1,
+                FacebookUrl = "sss",
+                InstagramUrl = "aa",
+                PlayerPositionId = 1,
+                HeightInCm = 0,
+                TwitterUrl = "A"
             };
 
             await _unitOfWork.Repository<Player>().AddAsync(player);
